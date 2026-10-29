@@ -6,7 +6,6 @@
   const owner = (config.githubUsername || derivedOwner).trim();
   const repo = (config.repository || 'PDFNotesBasic').trim();
   const repoUrl = owner ? `https://github.com/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}` : '';
-  const email = (config.supportEmail || '').trim();
   const appStore = (config.appStoreURL || '').trim();
 
   document.querySelectorAll('[data-github-link]').forEach(function (link) {
@@ -18,16 +17,6 @@
       link.setAttribute('aria-disabled', 'true');
       link.setAttribute('title', 'Available after publishing at GitHub Pages');
       link.classList.add('disabled-link');
-    }
-  });
-  document.querySelectorAll('[data-support-email]').forEach(function (element) {
-    if (email && /.+@.+\..+/.test(email)) {
-      element.textContent = email;
-      if (element.tagName === 'A') element.setAttribute('href', 'mailto:' + email);
-    } else {
-      element.textContent = 'Support email not configured yet';
-      if (element.tagName === 'A') element.removeAttribute('href');
-      element.classList.add('needs-setup');
     }
   });
   document.querySelectorAll('[data-appstore-link]').forEach(function (element) {

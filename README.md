@@ -8,13 +8,13 @@ A static website for **PDF Notes Basic** with a public GitHub Issues tracker.
 
 1. Open your existing repository: https://github.com/sheroytata/PDFNotesBasic . Make sure it is **Public**, because the website and issue forms need to be publicly accessible.
 2. Upload the **contents** of this ZIP to the root of the existing repository, not into a subfolder. GitHub **Add file → Upload files** can upload files; to preserve `.github/ISSUE_TEMPLATE/`, using git on a computer is simplest. If uploading in the browser, create these YAML files individually through **Add file → Create new file** with the exact paths shown in the package. If a file already exists in the repository, edit/replace it rather than creating a duplicate.
-3. The GitHub username is already set to `sheroytata` in `site-config.js`. **Set `supportEmail` to an address you actually check**; this is needed for App Store support contact. Set `appStoreURL` when the App Store listing is live.
-4. **Important:** Review and finalize `privacy.html` so it accurately describes your released app; do not submit a draft privacy statement to Apple. Remove publisher-review notices once verified.
+3. The GitHub username and repository name are already set in `site-config.js`. No support email is displayed; support is through GitHub Issues. Set `appStoreURL` when the App Store listing is live.
+4. **Important:** The privacy page now states that the app does not collect user data, accesses only user-chosen documents, and has no direct cloud access, based on the developer's description. Confirm these statements against the released build and App Store privacy disclosures before publication.
 5. In GitHub open **Settings → Pages → Build and deployment**. Choose **Deploy from a branch**; select **main** and **/(root)**; click **Save**.
 6. After enabling GitHub Pages, visit `https://sheroytata.github.io/PDFNotesBasic/`, `https://sheroytata.github.io/PDFNotesBasic/support.html`, and `https://sheroytata.github.io/PDFNotesBasic/privacy.html`.
 7. Verify **Settings → General → Features → Issues** is enabled, and open `https://github.com/sheroytata/PDFNotesBasic/issues/new/choose` to test the bug and feature forms.
 8. Optional: enable **Discussions** under **Settings → General → Features** for general questions, and link it from the support page if desired.
-9. Enter the published URLs into App Store Connect. **Support URL must have real contact information.**
+9. Enter the published URLs into App Store Connect. The support page offers public GitHub Issues rather than an email address. Apple's support-link review may require an additional user contact method; confirm that this approach meets Apple's requirements.
 
 ## App Store Connect URLs (once GitHub Pages is published)
 
@@ -26,10 +26,10 @@ A static website for **PDF Notes Basic** with a public GitHub Issues tracker.
 ## Editing and customizing the site
 
 - `index.html`: homepage and app features
-- `support.html`: email contact and questions
-- `privacy.html`: **DRAFT**, must be verified against the released app
+- `support.html`: GitHub Issues links and FAQs (no public email address)
+- `privacy.html`: privacy policy based on the developer-provided data practices; verify against the released app
 - `styles.css`: responsive dark theme
-- `site-config.js`: username, repository, email, App Store URL
+- `site-config.js`: username, repository, optional App Store URL
 - `site.js`: sets GitHub and support links dynamically
 - `assets/`: exact user-provided app-icon PNG and a small site favicon
 - `.github/ISSUE_TEMPLATE/`: GitHub issue forms
@@ -49,7 +49,7 @@ git push origin main
 ## Privacy and safe issue reporting
 
 - GitHub Issues are **public** and require sign-in to GitHub.
-- Visitors who do not use GitHub can contact your published support email.
+- Support requests are public GitHub Issues and require a GitHub account. No email address is displayed.
 - Do not publish screenshots of personal notes, proprietary technical documents, or other private material without reviewing them first.
 - This website does not load third-party analytics scripts, embed social trackers, or submit forms of its own. Its outbound links lead to GitHub and, when configured, the App Store.
 
@@ -59,4 +59,4 @@ git push origin main
 - Website: https://sheroytata.github.io/PDFNotesBasic/
 - Issue forms: https://github.com/sheroytata/PDFNotesBasic/issues/new/choose
 
-These links will only work after you create the public repository and publish GitHub Pages.
+These links will work after the public repository is configured and GitHub Pages is published.

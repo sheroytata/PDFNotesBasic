@@ -1,8 +1,7 @@
-// PDF Notes Basic — edit these values before publishing.
-// GitHub username set to sheroytata; update supportEmail before going live.
+// PDF Notes Basic public website configuration.
+// Support is provided through public GitHub Issues; no email is published.
 window.PDF_NOTES_CONFIG = {
-  githubUsername: "sheroytata", // Your GitHub account; used for the support and issue links.
+  githubUsername: "sheroytata",
   repository: "PDFNotesBasic",
-  supportEmail: "",  // REQUIRED before using the Support URL in App Store Connect.
-  appStoreURL: ""    // Optional: paste your App Store listing URL once the app is live.
+  appStoreURL: "" // Optional: add the App Store URL after release.
 };
